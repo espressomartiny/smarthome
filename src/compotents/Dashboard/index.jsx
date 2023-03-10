@@ -1,12 +1,18 @@
 import React from "react";
-import './style.css'
+import "./style.css";
 import Lights from "../Lights";
-import Light from "../Light";
+import Climate from "../Climate";
+import Energy from "../Energy";
+import Blinds from "../Blinds";
 
-const Dashboard = ({data}) =>
-<main class="dashboard">
-    <Lights lights={data.lights}/>
-</main>;
-
+const Dashboard = ({ data }) => {
+  return (
+    <main className="dashboard">
+      <Lights lights={data.lights} />
+      <Climate temperature={data.temperature} humidity={data.humidity} />
+      <Energy electricity={data.electricity} water={data.water} />
+      <Blinds state={data.blinds} />
+    </main>
+  );
+};
 export default Dashboard;
-
