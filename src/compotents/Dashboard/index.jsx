@@ -1,4 +1,5 @@
 import React from "react";
+import './style.css'
 import Lights from "../Lights";
 import Light from "../Light";
 
